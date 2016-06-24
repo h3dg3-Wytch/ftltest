@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="divs.css">
+<style>
+  .nav{
+  	position: absolute;
+  	left: 50px;
+  }
+</style>
+</head>
+<body>
+  
+	<p class="nav">NOOOO</p>
+
+</body>
+
+
+</html>

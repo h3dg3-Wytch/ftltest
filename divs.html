@@ -1,0 +1,271 @@
+<!Doctype html>
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="divs.css">
+<style>
+  #accountInfo{
+  	position: absolute;
+  	left: 400px;
+  }
+
+  #userInfoTop{
+  	position: absolute;
+  	top:150px;
+
+  }
+
+  #locationInfoTop{
+  	position: absolute;
+  	top:275px;
+  }
+
+  #tableCenter{
+  
+  	position: absolute;
+  	top:350px;
+  	left:150px;
+
+  }
+
+  .funds{
+       border: 1px solid black;
+       border-collapse: collapse;
+  }
+
+  .fundsCell{
+       border: 1px solid black;
+       border-collapse: collapse;
+       background-color: #C0C0C0;
+  }
+
+  #makePayableCenter{	
+
+  	position: absolute;
+  	top:525px;
+  	left:150px;
+
+ }
+#bottomAccountInfo{
+
+	position: absolute;
+	top: 700px;
+	left: 400px;
+
+}
+
+#boxes{
+
+
+	position: absolute;
+	top: 850px;
+	left: 150px;
+
+}
+
+.box{
+        float:right;
+        border: 1px solid black;
+        height:50px; width:50px;         
+}
+
+
+#infoLocationBottom{
+	position: absolute;
+	top: 850px;	
+}
+
+#userInfoBottom{
+	position: absolute;
+	top: 900px;	
+	left: 300px;
+	font-size: 75%;
+}
+
+#contentTable{
+	top:1000px;
+}
+</style>
+
+</head>
+<body> 
+	<div id="accountInfo">		
+	<img src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/Olympic-logo.png" alt="logo"/>
+       <table>
+        <tr>
+          <td>Account #:</td>
+          <td>400000000474</td>
+        </tr>
+        <tr>
+          <td >Invoice #:</td>
+          <td >41820</td>
+        </tr>
+        <tr>
+          <td>Coverage Period:</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Invoice Date:</td>
+          <td>09/01/2015</td>
+        </tr>
+          <tr>
+            <td>Invoice Due Date:#</td>
+            <td>09/01/2015</td>
+          </tr>
+          <tr>
+            <td>Total Amount Due:</td>
+            <td><b>$530.84</b></td>
+          </tr>
+          </table>
+  	</div>
+
+  	<div id="userInfoTop">
+   		<table>
+   		 <tr>
+     		 <td>Address</td>
+    	 </tr>
+   		 <tr>
+      		<td>Mailbox</td>
+    	</tr>
+    	<tr>
+      		<td>City</td>
+    	</tr>
+    	<tr>
+      		<td>Website</td>
+    	</tr>
+   		</table>
+  </div>
+
+   <div id="locationInfoTop">
+  	<table>
+    <tr>
+      <td>${firstName} ${lastName}</td>
+    </tr>
+    <tr>
+      <td>Street Address</td>
+    </tr>
+    <tr>
+      <td>City, State, ZIP</td>
+    </tr>
+  </table>
+  </div>  
+
+   <div id="tableCenter">
+      <table class="funds">
+        <tr>
+          <td class="fundsCell"><b>Previous Balance</b></td>
+          <td class="funds">400000000474</td>
+        </tr>
+        <tr>
+          <td class="fundsCell"><b>Payments</b></td>
+          <td class="funds">41820</td>
+        </tr>
+        <tr>
+          <td class="fundsCell"><b>Current Period Charges</b></td>
+          <td class="funds">09/01/2015-09/30/2015</td>
+        </tr>
+        <tr>
+          <td class="fundsCell"><b>Adjustments</b></td>
+          <td class="funds">09/01/2015</td>
+        </tr>
+        <tr>
+          <td class="fundsCell"><b>Total Amount Due</b></td>
+          <td class="funds">09/01/2015</td>
+        </tr>
+        <tr>
+          <td class="fundsCell"><b>Total Amount Due</b></td>
+          <td class="funds"><b>$530.84</b></td>
+        </tr>
+    </table>
+  </div>
+
+   <div id="makePayableCenter" >
+    <table>
+      <tr><td class="checkCell">Please make checks payable to: MHC</td></tr>
+      <tr><td class="checkCell">Mail check payments to the addres below</td></tr>
+      <tr><td class="checkCell">To make elctronic payments by ACH or credit card, go to www.mhc.coop</td></tr>
+      <tr><td class="checkCell">For question about your invoice, please call 855-447-2900</td></tr>
+    </table>	
+   </div>
+
+   <div id="bottomAccountInfo" >
+    <table>
+      <tr>
+        <td class="stubCell">Account #:</td>
+        <td>&nbsp</td>
+        <td class="stubCell"> 400000000474</td>
+      </tr>
+      <tr>
+        <td class="stubCell">Invoice #:</td>
+        <td>&nbsp</td>
+        <td class="stubCell">41820</td>
+      </tr>
+      <tr>
+        <td class="stubCell">Due Date:#</td>
+        <td>&nbsp</td>
+        <td class="stubCell"> 09/01/2015</td>
+      </tr>
+      <tr>
+        <td class="stubCell">Total Amount Due:</td>
+        <td>&nbsp</td>
+        <td class="stubCell"><b>$530.84</b></td>
+      </tr>
+    </table>
+    </div>
+
+     <div id="boxes">
+      <p style="position:absolute;">Amount Included: <b>$</b></p>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box" style="margin-left: 150px;"></div>
+    </div>
+
+ <div id="infoLocationBottom">
+  	<table>
+    <tr>
+      <td>${firstName} ${lastName}</td>
+    </tr>
+    <tr>
+      <td>Street Address</td>
+    </tr>
+    <tr>
+      <td>City, State, ZIP</td>
+    </tr>
+  </table>
+ </div> 
+    <div id="userInfoBottom">
+      <table>
+      <tr>
+          <td>Please make check to: </td>
+        </tr>
+        <tr>
+          <td>Mailbox</td>
+        </tr>
+        <tr>
+          <td>City</td>
+        </tr>
+        <tr>
+          <td>Website</td>
+        </tr>
+      </table>
+
+    </div> 
+
+    <h3>Coverage Level Detail</h3>
+
+<div id="contentTable">
+    <table style="width:100%">
+    	<th>Last Name</th>
+    	<th>First Name</th>
+    	<th>Plan</th>
+    	<th>Charges</th>
+    </table>
+</div>
+
+</body>
+</html>

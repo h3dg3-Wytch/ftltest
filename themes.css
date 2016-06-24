@@ -1,0 +1,33 @@
+.funds{
+       border: 1px solid black;
+       border-collapse: collapse;
+}
+.fundsCell{
+       border: 1px solid black;
+       border-collapse: collapse;
+       background-color: #C0C0C0;
+}
+
+.checkCell{
+       text-align: center;
+}
+
+.stubCell{
+       text-align: right;
+}
+
+.center{
+         display:flex;
+         justify-content:center;
+         align-items:center;
+}
+
+.margin{
+        margin-top: 50px;
+}
+
+.box{
+        float:right;
+        border: 1px solid black;
+        height:50px; width:50px;  
+}
