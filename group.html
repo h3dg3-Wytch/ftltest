@@ -2,38 +2,45 @@
 	<title>group</title>
 	<head>
 		<style type="text/css">
+			@font-face {
+    			font-family: ocraext;
+   				src: url("/home/rex/Documents/gitdocs/Billing/src/main/webapp/fonts/ocraext.ttf");
+			}
 			#logoPlacement{
 				position: absolute;
-				left:512px;
-				top:6px;
+				left:740px;
+				top:20px;
 			}
 			#invoiceInfoTableTop{
 				position: absolute;
-				left:412px;
-				top:90px;
+				left:600px;
+				top:100px;
 				font-size: 75%;
 			}
 			#locationInfoTop{
 				position: absolute;
-				top: 66px;
+				top: 100px;
+				left: 80px;
 			}
 			#userInfoTop{
 				position: absolute;
-				top: 218px;
-							}
+				top: 260px;
+				left: 80px;
+			}
 			#benefitsStatement{
 				position: absolute;
-				top: 381px;
+				top: 450px;
+				left: 80px;
 			}
 			#tableCenter{
 				position: absolute;
-				top: 435px;
-				left: 163px;
-
-			}
+				top: 500px;
+				left: 200px;
+				width: 600px;
+			}	
 			.fundsCell{
-				 border: 1px solid black;
-       			 border-collapse: collapse;
+				border: 1px solid black;
+       			border-collapse: collapse;
        			background-color: #C0C0C0;
 			}
 			.funds{
@@ -42,25 +49,192 @@
 			}
 			#makePayableCenter{
 				position: absolute;
-				top: 580px;
-				left: 150px;
+				top: 640px;
+				left: 372px;
 				text-align: center;
 				font-size: 75%;
 			}
 			#noticeTable{
 				position: absolute;
-				top: 725px;
+				top: 780px;
+				left: 120px;
 				width: 100%;
 				font-size: 60%;
 			}
+			#billPortionText{
+				position: absolute;
+				top: 705px;
+				left: 120px;	
+				font-size: 90%;		
+				font-style: bold; 
+			}
 			#cutHere{
 				position: absolute;
-				top: 750px;
-				left: 50px;
+				top: 718px;
+				left: 20px;
 
 			}
+			#scissorsLogo{
+				position: absolute;
+				top: 735px;
+			}
+		
+			#cutHereParagraph{
+				position: absolute;
+				top: 740px;
+				font-size: 75%;
+			}
+			#bottomLogo{
+				position: absolute;
+				top: 780px;
+			}
+			#bottomAccountTable{
+				position: absolute;
+				top: 760px;
+				left: 425px;
+				font-size: 75%;
+				text-align: right;
+			}
+			#boxes{
+				position: absolute;
+				top: 865px;
+				left: 300px;
+			}
+			.box{
+  				float:right;
+  				border: 1px solid black;
+  				height:50px; width:50px;
+			}
+			#amountParagraph{
+				position: absolute;
+				top: 865px;
+				left: 150px;
+			}
+			#bottomLocationTable{
+				position: absolute;
+				top: 925px;
+				font-size: 70%;
+			}
+			#bottomMailingInfo{
+				position: absolute;
+				top: 925px;
+				left: 300px;
+				font-size: 70%;
+			}
+			#bankId{
+				position: absolute;
+				top: 990px;
+				left: 150px;
+				font-family: ocraext;
+			}
+			#invoiceSummaryPosition{
+				position: absolute;
+				top: 1030px;
+				left:500px;
+			}
+			#invoiceSummaryInfoTableTop{
+				position: absolute;
+				top: 1100px;
+				left: 490px;
+				font-size: 70%;
+				text-align: left;
+			}
+			#invoiceSummaryLocationInfoTop{
+				position: absolute;
+				top: 1100px;
+				font-size: 70%;
+			}
+			#invoiceSummaryLocationTable{
+				position: absolute;
+				top: 1422px;
+				font-size: 70%;
+			}
+			#invoiceSummaryTable{
+				position: absolute;
+				top: 1545px;
+				font-size: 70%;
+				width: 100%;
+				border-collapse: collapse;
+				margin: 0;
+			}
+			#invoiceSummaryTableHeaderCell{
+				border: 1px solid black;
+      			border-collapse: collapse;
+       			background-color: #C0C0C0;
+			}
+			#invoiceSummaryTableCell{
+				border: 1px solid black;
+  			    border-collapse:collapse;
+			}
+			#invoiceSummaryTotalAmountDueTable{
+				position: absolute;
+				top: 1582px;
+				left: 447px;
+				text-align: left;
+			}
+			#paymentOptionsParagraph{
+				position: absolute;
+				top: 1920px;
+				font-size: 70%;
+			}
+			#electronicPaymentTable{
+				position: absolute;
+				top: 1970px;
+				font-size: 70%;
+			}
+			#invoiceSummaryCreditCardPayment{
+				position: absolute;
+				top: 1970px;
+				left: 250px;
+				font-size: 70%;
+			}
+			#invoiceSummaryMailCheckToTable{
+				position: absolute;
+				top: 1970px;
+				left: 503px;
+				font-size: 70%;
+			}
+			#employeeLevelDetailHeader{
+				position: absolute;
+				top: 2030px;
+			}
+			#employeeLevelDetailIdTable{
+				position: absolute;
+				top: 2066px;
+				left: 500px;
+				font-size: 65%;
+			}
+			#employeeLevelDetail{
+				position: absolute;
+				top: 2096px;
+				font-size: 65%;
+			}
+			#employeeLevelTable{
+				position: absolute;
+				top: 2120px;
+				font-size: 70%;
+			}
+			#specialEmployeeHeaderCells{
+				border-bottom: 1px solid black;
+   				border-collapse:collapse;
+			} 
+			#adjustmentDetailTable{
+				position: absolute;
+				top: 3100px;
+				left: 500px;
+				font-size: 65%;
+			}
+			#adjustmentDetailParagraph{
+				position: absolute;
+				top: 3135px;
+				font-size: 80%;
+			}
+			#adjustmentDetailsTable{
+				position: absolute;
+				top: 3170px;
+				font-size: 70%;
+			}
 		</style>
-
 	</head>
 
 	<html>
@@ -71,31 +245,31 @@
 	</div>		
 	<div id="invoiceInfoTableTop">
 		<table>
-		<tr>
-          <td>Account #:</td>
+		<tr style="width: 4000px;">
+          <td>Account #:</td>	
           <td>${invoice.uniqueId?c}</td>
         </tr>
-        <tr>
+        <tr colspan="3"> 
           <td>Invoice #:</td>
           <td>${caseInfo.uniqueId?c}</td>
         </tr>
-        <tr>	
+        <tr colspan="3">	
           <td>Coverage Period:</td>
           <td>${invoice.startPeriod?date} - ${invoice.endPeriod?date}</td>
         </tr>
-        <tr>
+        <tr colspan="3">
           <td>Invoice Date:</td>
           <td>${invoice.startPeriod?date}</td>
         </tr>
-        <tr>
+        <tr colspan="3">
             <td>Invoice Due Date:#</td>
             <td>${invoice.endPeriod?date}</td>
         </tr>
-        <tr>
+        <tr colspan="3">
             <td>Total Amount Due:</td>
             <td><b>${invoice.total}</b></td>
         </tr>
-		</table>
+	</table>
 
 	</div>
 
@@ -134,8 +308,6 @@
   		<h4>BENEFITS ACCOUNT STATEMENT</h4>
   	</div>
 
-  	</body>
-
   	 <div id="tableCenter">
       <table class="funds">
         <tr>
@@ -165,9 +337,12 @@
     <table>
       <tr><td class="checkCell">Please make checks payable to: MHC</td></tr>
       <tr><td class="checkCell">Mail check payments to the addres below</td></tr>
-      <tr><td class="checkCell">To make elctronic payments by ACH or credit card, go to www.mhc.coop</td></tr>
-      <tr><td class="checkCell">For question about your invoice, please call 855-447-2900 Press 2</td></tr>
+      <tr><td class="checkCell"></td></tr>
     </table>
+  </div>
+
+  <div id="questionsAboutInvoicesParagraph">
+  	<p>For questions about your invoice, please cal 855-447-2900 Press 2</p>
   </div>
 
   <div id="noticeTable">
@@ -181,7 +356,305 @@
   		</table>
   </div>
 
-  <p id="cutHere">-----------------------------------------------------------------------------------------------------------------------------------------</p>
+<div id="billPortionText">
+	<p>Please detach and include with payment, keep top portion for your records.</p>
+</div>
+<p id="cutHere">--------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+  
+<div id="scissorsLogo">
+  <img src="/home/rex/Pictures/scissors_result.jpg">  
+</div>
 
-  </p>
+<div id="cutHereParagraph">
+	<p>Cut here</p>
+</div>
+
+<div id="bottomLogo">
+	<img src="/home/rex/Downloads/MHC_Logo_group_bottom.png">
+</div>
+
+<div id="bottomAccountTable">
+	<table>
+		<tr>
+          <td>Account #:</td>
+          <td>${invoice.uniqueId?c}</td>
+        </tr>
+        <tr>
+          <td>Invoice #:</td>
+          <td>${caseInfo.uniqueId?c}</td>
+        </tr>
+        <tr>
+          <td>Invoice#</td>
+          <td>${invoice.endPeriod?date}</td>
+        </tr>
+        <tr>
+          <td>Total Amount Due:</td>
+          <td><b>${invoice.total}</b></td>
+        </tr>
+		</table>
+</div>
+
+<p id="amountParagraph">Amount Included: <b>$</b></p>
+
+<div id="boxes">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+</div>
+
+<div id="bottomLocationTable">
+	<table>
+		<tr>
+			<td>Opportunities INC</td>
+		</tr>
+		<tr>
+			<td>PO BOX 2289</td>
+		</tr>
+		<tr>
+			<td>NULL</td>
+		</tr>
+		<tr>
+			<td>GREAT FALLS, MT 59403</td>
+		</tr>
+	</table>
+</div>
+
+<div id="bottomMailingInfo">
+	<table>
+		<tr>
+			<td>MHC</td>
+		</tr>
+		<tr>
+			<td>P.O. Box 410035</td>
+		</tr>
+		<tr>
+			<td>Salt Lake City, UT 84141-0035</td>
+		</tr>
+	</table>
+</div>
+
+<p id="bankId">20000000005004 000076945 0008809299 3</p>	
+
+<div>
+	<h2 id="invoiceSummaryPosition">Invoice Summary</h2>
+</div>
+
+<div id="invoiceSummaryInfoTableTop">
+		<table>
+		<tr>
+          <td>Account #:</td>
+          <td>${invoice.uniqueId?c}</td>
+        </tr>
+        <tr>
+          <td>Invoice #:</td>
+          <td>${caseInfo.uniqueId?c}</td>
+        </tr>
+        <tr>	
+          <td>Coverage Period:</td>
+          <td>${invoice.startPeriod?date} - ${invoice.endPeriod?date}</td>
+        </tr>
+        <tr>
+          <td>Invoice Date:</td>
+          <td>${invoice.startPeriod?date}</td>
+        </tr>
+        <tr>
+            <td>Invoice Due Date:#</td>
+            <td>${invoice.endPeriod?date}</td>
+        </tr>
+        <tr>
+            <td>Total Amount Due:</td>
+            <td><b>${invoice.total}</b></td>
+        </tr>
+	</table>
+</div>
+
+<div id="invoiceSummaryLocationInfoTop">
+	  <table>
+       <tr>
+         <td>${billInfo.address1}</td>
+       </tr>
+       <tr>
+          <td>Mailbox</td>
+      </tr>
+      <tr>
+          <td>${billInfo.city}</td>
+      </tr>
+      <tr>
+          <td>Website</td>
+      </tr>
+      </table>
+</div>
+
+<div id="invoiceSummaryLocationTable">
+	<table>
+		<tr>
+			<td>Opportunities INC</td>
+		</tr>
+		<tr>
+			<td>PO BOX 2289</td>
+		</tr>
+		<tr>
+			<td>NULL</td>
+		</tr>
+		<tr>
+			<td>GREAT FALLS, MT 59403</td>
+		</tr>
+	</table>
+</div>
+
+<div id="invoiceSummaryTable">
+	<table width="99%" style="border-collapse: collapse;">
+		<tr>
+			<td id="invoiceSummaryTableHeaderCell">Plan</td>
+			<td id="invoiceSummaryTableHeaderCell"># of Subscribers</td>
+			<td id="invoiceSummaryTableHeaderCell">Current Period Charfes</td>
+			<td id="invoiceSummaryTableHeaderCell">Adjustments</td>
+			<td id="invoiceSummaryTableHeaderCell">Total</td>
+		</tr>
+		<tr>
+			<td id="invoiceSummaryTableCell">Plan A:Gold Connected Care</td>
+			<td id="invoiceSummaryTableCell">7</td>
+			<td id="invoiceSummaryTableCell">4570.44</td>
+			<td id="invoiceSummaryTableCell">0.00</td>
+			<td id="invoiceSummaryTableCell">4570.44</td>
+		</tr>
+	</table>
+</div>
+
+<div id="invoiceSummaryTotalAmountDueTable">
+	<table>
+		<tr>
+		<td width="200px">Total Amount Due:</td>
+		<td style="text-align: right">$88,092.99</td>
+		</tr>
+	</table>
+</div>
+
+<div id="paymentOptionsParagraph">
+	<p>Payment Options Available</p>
+</div>
+
+<div id="electronicPaymentTable">
+	<table>
+		<tr><td>Electronic Payment(ACH/EFT)</td></tr>
+		<tr><td>Log on www.mhc.coop-secure website</td></tr>
+		<tr><td>Enter the required bank information</td></tr>
+	</table>
+</div>
+
+<div id="invoiceSummaryCreditCardPayment">
+	<table>
+		<tr>
+		<td>Credit Card Payment</td>
+		</tr>
+		<tr>
+		<td>Log on www.mhc.coop-secure website</td>
+		</tr>
+		<tr>
+		<td>Enter required card information</td>
+		</tr>
+	</table>	
+</div>
+
+<div id="invoiceSummaryMailCheckToTable">
+	<table>
+		<tr>
+			<td>Check Payment mail check to </td>		
+		</tr>
+		<tr>
+			<td>MHC, PO Box 410035</td>
+		</tr>
+		<tr>
+			<td>Salt Lake City, UT 84141-0035</td>
+		</tr>
+	</table>
+</div>
+
+<div id="employeeLevelDetailHeader">
+	<h3>Employee Level Detail</h3>
+</div>
+
+<div id="employeeLevelDetailIdTable">
+	<table>
+	<tr>
+		<td>Invoice Number:</td>
+		<td>${caseInfo.uniqueId?c}</td>
+	</tr>
+	<tr>
+		<td>Account Number:</td>
+		<td>${invoice.uniqueId?c}}</td>
+	</tr>
+	<tr>
+		<td>Coverage Period:</td>
+		<td>07/07/7777-07/07/7777</td>
+	</tr>	
+	</table>
+</div>
+
+<div id="employeeLevelTable">
+	<#list payments>	 
+	<table style="width: 665px;">
+	<tr>
+		<td id="specialEmployeeHeaderCells">Last Name</td>
+		<td id="specialEmployeeHeaderCells">First Name</td>
+		<td id="specialEmployeeHeaderCells">Employee ID Dept.</td>
+		<td id="specialEmployeeHeaderCells">Site</td>		
+		<td id="specialEmployeeHeaderCells">Plan</td>
+		<td id="specialEmployeeHeaderCells">Coverage Level</td>
+		<td id="specialEmployeeHeaderCells">Month</td>
+		<td id="specialEmployeeHeaderCells">Current Charges</td>
+	</tr>			
+	<tr>
+
+	</tr>
+	</table>
+	<#/list>
+</div>	
+
+<div id="adjustmentDetailTable">
+	<table>
+	<tr>
+		<td>Invoice Number:</td>
+		<td>${caseInfo.uniqueId?c}</td>
+	</tr>
+	<tr>
+		<td>Account Number:</td>
+		<td>${invoice.uniqueId?c}}</td>
+	</tr>	
+	<tr>
+		<td>Coverage Period:</td>
+		<td>07/07/7777-07/07/7777</td>
+	</tr>	
+	</table>
+</div>
+
+<div id="adjustmentDetailParagraph">
+	<p style="border-bottom: 1px solid black;">Adjustment Detail</p>
+</div>
+
+<div id="adjustmentDetailsTable">
+	<table style="width: 665px;">
+		<tr>
+			<td id="specialEmployeeHeaderCells">Last Name</td>
+			<td id="specialEmployeeHeaderCells">First Name</td>
+			<td id="specialEmployeeHeaderCells">Employee ID Dept.</td>
+			<td id="specialEmployeeHeaderCells">Site</td>
+			<td id="specialEmployeeHeaderCells">Plan</td>
+			<td id="specialEmployeeHeaderCells">Coverage Level</td>
+			<td id="specialEmployeeHeaderCells">Month</td>
+			<td id="specialEmployeeHeaderCells">Current Charges</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>	
+	</table>		
+</div>
+
+</body>	
 </html>
