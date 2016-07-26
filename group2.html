@@ -10,7 +10,7 @@
 				position: absolute;
 				left:740px;
 				top:20px;
-			} 
+			}
 			#invoiceInfoTableTop{
 				position: absolute;
 				left:600px;
@@ -29,25 +29,23 @@
 			}
 			#benefitsStatement{
 				position: absolute;
-				top: 430px;
+				top: 450px;
 				left: 80px;
 			}
 			#tableCenter{
 				position: absolute;
 				top: 500px;
 				left: 200px;
-				width: 100%;
+				width: 600px;
 			}	
 			.fundsCell{
 				border: 1px solid black;
        			border-collapse: collapse;
        			background-color: #C0C0C0;
-       			width:50%;
 			}
 			.funds{
 				 border: 1px solid black;
       			 border-collapse: collapse;
-      			 width: 65%;
 			}
 			#makePayableCenter{
 				position: absolute;
@@ -59,32 +57,32 @@
 			#questionsAboutInvoicesParagraph{
 				position: absolute;
 				top: 700px;
-				left: 310px;
-				width: 75%;
+				left: 300px;
 			}
 			#noticeTable{
 				position: absolute;
 				top: 780px;
-				left: 170px;
+				left: 120px;
 				width: 100%;
 				font-size: 60%;
 			}
 			#billPortionText{
 				position: absolute;
 				top: 820px;
-				left: 260px;	
+				left: 220px;	
 				font-size: 90%;		
 				font-style: bold; 
 			}
 			#cutHere{
 				position: absolute;
-				top:  964px;
+				top:  840px;
 				left: 20px;
 			}
 			#scissorsLogo{
 				position: absolute;
 				top: 860px;
-				left: 20px;	
+				left: 20px;
+
 			}
 			#cutHereParagraph{
 				position: absolute;
@@ -106,7 +104,7 @@
 			}
 			#boxes{
 				position: absolute;
-				top: 1100px;
+				top: 1020px;
 				left: 520px;
 			}	
 			.box{
@@ -116,32 +114,30 @@
 			}
 			#amountParagraph{
 				position: absolute;
-				top: 1090px;
+				top: 1010px;
 				left: 370px;
 			}
 			#bottomLocationTable{
 				position: absolute;
-				top: 1180px;
+				top: 1080px;
 				left: 60px;
-				font-size: 70%;
 				
 			}
 			#bottomMailingInfo{
 				position: absolute;
-				top: 1180px;
+				top: 1080px;
 				left: 480px;
-				font-size: 70%;
 			}
 			#bankId{
 				position: absolute;
 				font-family: ocraext;
-				top:  1280px;
+				top:  1230px;
 				left: 280px;
 			}
 			#invoiceSummaryPosition{
 				position: absolute;
 				top: 1300px;
-				left: 600px;
+				left: 620px;
 			}
 			#invoiceSummaryInfoTableTop{
 				position: absolute;
@@ -170,12 +166,12 @@
 				border-collapse: collapse;
 				margin: 0;
 			}
-			.invoiceSummaryTableHeaderCell{
+			#invoiceSummaryTableHeaderCell{
 				border: 1px solid black;
       			border-collapse: collapse;
        			background-color: #C0C0C0;
 			}
-			.invoiceSummaryTableCell{
+			#invoiceSummaryTableCell{
 				border: 1px solid black;
   			    border-collapse:collapse;
 			}
@@ -183,7 +179,7 @@
 				position: absolute;
 				text-align: left;
 				top:1900px;
-				left:610px;
+				left:520px;
 			}
 			#paymentOptionsParagraph{
 				position: absolute;
@@ -241,8 +237,9 @@
 				font-size: 65%;
 			}
 			#adjustmentDetailParagraph{
-				top:3950px;
+				top:3910px;
 				position: absolute;
+				font-size: 80%;
 			}
 			#adjustmentDetailsTable{
 				top:4000px;
@@ -252,9 +249,8 @@
 			}
 		</style>
 	</head>
-	
+
 	<html>
-	
 	<body>
 
 	<div>
@@ -262,31 +258,36 @@
 	</div>		
 	<div id="invoiceInfoTableTop">
 		<table>
-		<tr>
-          <td width="120">Account #:</td>	
+		<tr style="width: 4000px;">
+          <td>Account #:</td>	
           <td>${invoice.uniqueId?c}</td>
         </tr>
-        <tr> 
-          <td >Invoice #:</td>
+        <tr colspan="3"> 
+          <td>Invoice #:</td>
           <td>${caseInfo.uniqueId?c}</td>
         </tr>
-        <tr> 	
+        <tr colspan="3">	
           <td>Coverage Period:</td>
           <td>${invoice.startPeriod?date} - ${invoice.endPeriod?date}</td>
         </tr>
-        <tr> 	 
+        <tr colspan="3">
           <td>Invoice Date:</td>
           <td>${invoice.startPeriod?date}</td>
         </tr>
-        <tr> 	
+        <tr colspan="3">
             <td>Invoice Due Date:#</td>
             <td>${invoice.endPeriod?date}</td>
         </tr>
-        <tr> 	
+        <tr colspan="3">
             <td>Total Amount Due:</td>
             <td><b>${invoice.total}</b></td>
         </tr>
 	</table>
+
+	</div>
+
+	<div>
+
 	</div>
 
 	<div id="locationInfoTop">
@@ -358,7 +359,7 @@
   </div>
 
   <div id="questionsAboutInvoicesParagraph">
-  	<p style="font-size: 12px;">For questions about your invoice, please call 855-447-2900 Press 2</p>
+  	<p>For questions about your invoice, please call 855-447-2900 Press 2</p>
   </div>
 
   <div id="noticeTable">
@@ -392,19 +393,19 @@
 <div id="bottomAccountTable">
 	<table>
 		<tr>
-          <td width="120">Account #:</td>
+          <td>Account #:</td>
           <td>${invoice.uniqueId?c}</td>
         </tr>
         <tr>
-          <td width="120">Invoice #:</td>
+          <td>Invoice #:</td>
           <td>${caseInfo.uniqueId?c}</td>
         </tr>
         <tr>
-          <td width="120">Invoice#</td>
+          <td>Invoice#</td>
           <td>${invoice.endPeriod?date}</td>
         </tr>
         <tr>
-          <td width="120">Total Amount Due:</td>
+          <td>Total Amount Due:</td>
           <td><b>${invoice.total}</b></td>
         </tr>
 		</table>
@@ -439,7 +440,6 @@
 	</table>
 </div>
 
-	
 <div id="bottomMailingInfo">
 	<table>
 		<tr>
@@ -463,7 +463,7 @@
 <div id="invoiceSummaryInfoTableTop">
 		<table>
 		<tr>
-          <td width="120">Account #:</td>
+          <td>Account #:</td>
           <td>${invoice.uniqueId?c}</td>
         </tr>
         <tr>
@@ -526,26 +526,26 @@
 <div id="invoiceSummaryTable">
 	<table width="99%" style="border-collapse: collapse;">
 		<tr>
-			<td class="invoiceSummaryTableHeaderCell">Plan</td>
-			<td class="invoiceSummaryTableHeaderCell"># of Subscribers</td>
-			<td class="invoiceSummaryTableHeaderCell">Current Period Charfes</td>
-			<td class="invoiceSummaryTableHeaderCell">Adjustments</td>
-			<td class="invoiceSummaryTableHeaderCell">Total</td>
+			<td id="invoiceSummaryTableHeaderCell">Plan</td>
+			<td id="invoiceSummaryTableHeaderCell"># of Subscribers</td>
+			<td id="invoiceSummaryTableHeaderCell">Current Period Charfes</td>
+			<td id="invoiceSummaryTableHeaderCell">Adjustments</td>
+			<td id="invoiceSummaryTableHeaderCell">Total</td>
 		</tr>
 		<tr>
-			<td class="invoiceSummaryTableCell">Plan A:Gold Connected Care</td>
-			<td class="invoiceSummaryTableCell">7</td>
-			<td class="invoiceSummaryTableCell">4570.44</td>
-			<td class="invoiceSummaryTableCell">0.00</td>
-			<td class="invoiceSummaryTableCell">4570.44</td>
-		</tr>	
+			<td id="invoiceSummaryTableCell">Plan A:Gold Connected Care</td>
+			<td id="invoiceSummaryTableCell">7</td>
+			<td id="invoiceSummaryTableCell">4570.44</td>
+			<td id="invoiceSummaryTableCell">0.00</td>
+			<td id="invoiceSummaryTableCell">4570.44</td>
+		</tr>
 	</table>
 </div>
 <div id="invoiceSummaryTotalAmountDueTable">
 	<table>
 		<tr>
 		<td width="200px">Total Amount Due:</td>
-		<td style="text-align: right;">$88,092.99</td>
+		<td style="text-align: right">$88,092.99</td>
 		</tr>
 	</table>
 </div>
@@ -609,32 +609,23 @@
 </div>
 
 <div id="employeeLevelTable">
+	<#list payments>	 
 	<table style="width: 100%;">
-	<#assign counter = 0>
-	<#assign maxItems = 4>
-	<#list invoice.transactions as transaction>
-    <#if counter == 0>
-        <tr>
-            <td class="specialEmployeeHeaderCells">Last Name</td>
-			<td class="specialEmployeeHeaderCells">First Name</td>
-			<td class="specialEmployeeHeaderCells">Employee ID Dept.</td>
-			<td class="specialEmployeeHeaderCells">Site</td>		
-			<td class="specialEmployeeHeaderCells">Plan</td>
-			<td class="specialEmployeeHeaderCells">Coverage Level</td>
-			<td class="specialEmployeeHeaderCells">Month</td>
-			<td class="specialEmployeeHeaderCells">Current Charges</td>
-        </tr>
-    </#if>
-    <tr>
-        <td>${transaction.amount}</td>
-    </tr>
-    <#if counter == maxItems>
-        <#assign counter = 0>
-    <#else>
-        <#assign counter = counter + 1>
-    </#if>
-	</#list>
+	<tr>
+		<td id="specialEmployeeHeaderCells">Last Name</td>
+		<td id="specialEmployeeHeaderCells">First Name</td>
+		<td id="specialEmployeeHeaderCells">Employee ID Dept.</td>
+		<td id="specialEmployeeHeaderCells">Site</td>		
+		<td id="specialEmployeeHeaderCells">Plan</td>
+		<td id="specialEmployeeHeaderCells">Coverage Level</td>
+		<td id="specialEmployeeHeaderCells">Month</td>
+		<td id="specialEmployeeHeaderCells">Current Charges</td>
+	</tr>			
+	<tr>
+
+	</tr>
 	</table>
+	<#/list>
 </div>	
 
 <div id="adjustmentDetailTable">
@@ -661,15 +652,14 @@
 <div id="adjustmentDetailsTable">
 	<table style="width: 100%;">
 		<tr>
-			<td class="specialEmployeeHeaderCells">Last Name</td>
-			<td class="specialEmployeeHeaderCells">First Name</td>
-			<td class="specialEmployeeHeaderCells">Employee ID Dept.</td>
-			<td class="specialEmployeeHeaderCells">Site</td>
-			<td class="specialEmployeeHeaderCells">Plan</td>
-			<td class="specialEmployeeHeaderCells">Coverage Level</td>
-			<td class="specialEmployeeHeaderCells">Month</td>
-			<td class="specialEmployeeHeaderCells">Reason</td>
-			<td class="specialEmployeeHeaderCells">Amount</td>
+			<td id="specialEmployeeHeaderCells">Last Name</td>
+			<td id="specialEmployeeHeaderCells">First Name</td>
+			<td id="specialEmployeeHeaderCells">Employee ID Dept.</td>
+			<td id="specialEmployeeHeaderCells">Site</td>
+			<td id="specialEmployeeHeaderCells">Plan</td>
+			<td id="specialEmployeeHeaderCells">Coverage Level</td>
+			<td id="specialEmployeeHeaderCells">Month</td>
+			<td id="specialEmployeeHeaderCells">Current Charges</td>
 		</tr>
 		<tr>
 			<td></td>
