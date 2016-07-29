@@ -10,7 +10,7 @@
 				position: absolute;
 				left:740px;
 				top:20px;
-			} 
+			}
 			#invoiceInfoTableTop{
 				position: absolute;
 				left:600px;
@@ -19,6 +19,7 @@
 			}
 			#locationInfoTop{
 				position: absolute;
+				width: 100%;
 				top: 100px;
 				left: 80px;
 			}
@@ -37,7 +38,7 @@
 				top: 500px;
 				left: 200px;
 				width: 100%;
-			}	
+			}
 			.fundsCell{
 				border: 1px solid black;
        			border-collapse: collapse;
@@ -63,18 +64,18 @@
 				width: 75%;
 			}
 			#noticeTable{
-				position: absolute;
-				top: 780px;
-				left: 170px;
-				width: 100%;
-				font-size: 60%;
-			}
-			#billPortionText{
-				position: absolute;
-				top: 820px;
-				left: 260px;	
-				font-size: 90%;		
-				font-style: bold; 
+        		position: absolute;
+        		top: 880px;
+        		left: 170px;
+        		width: 100%;
+        		font-size: 60%;
+      		}
+      		#billPortionText{
+        		position: absolute;
+        		top: 930px;
+        		left: 260px;  
+        		font-size: 90%;   
+        		font-style: bold;
 			}
 			#cutHere{
 				position: absolute;
@@ -83,23 +84,23 @@
 			}
 			#scissorsLogo{
 				position: absolute;
-				top: 860px;
-				left: 20px;	
+				top: 980px;
+				left: 20px;
 			}
 			#cutHereParagraph{
 				position: absolute;
-				top: 870px;
+				top: 990px;
 				left: 20px;
 				font-size: 75%;
 			}
 			#bottomLogo{
 				position: absolute;
-				top: 910px;
+				top: 1050px;
 				left: 20px;
 			}
 			#bottomAccountTable{
 				position: absolute;
-				top: 880px;
+				top: 1000px;
 				left: 620px;
 				font-size: 75%;
 				text-align: right;
@@ -108,7 +109,7 @@
 				position: absolute;
 				top: 1100px;
 				left: 520px;
-			}	
+			}
 			.box{
   				float:right;
   				border: 1px solid black;
@@ -124,7 +125,7 @@
 				top: 1180px;
 				left: 60px;
 				font-size: 70%;
-				
+
 			}
 			#bottomMailingInfo{
 				position: absolute;
@@ -233,7 +234,7 @@
 			#specialEmployeeHeaderCells{
 				border-bottom: 1px solid black;
    				border-collapse:collapse;
-			} 
+			}
 			#adjustmentDetailTable{
 				position: absolute;
 				top: 3930px;
@@ -252,37 +253,37 @@
 			}
 		</style>
 	</head>
-	
+
 	<html>
-	
+
 	<body>
 
 	<div>
 		<img id="logoPlacement" src="/home/rex/Documents/html/MHC_Logo_group.png" alt="logo"/>
-	</div>		
+	</div>
 	<div id="invoiceInfoTableTop">
 		<table>
 		<tr>
-          <td width="120">Account #:</td>	
-          <td>${invoice.uniqueId?c}</td>
+          <td width="120px">Account #:</td>
+          <td>${invoice.uniqueId?string["00000000000000"]}</td>
         </tr>
-        <tr> 
+        <tr>
           <td >Invoice #:</td>
-          <td>${caseInfo.uniqueId?c}</td>
+          <td>${invoice.group.uniqueId?c}</td>
         </tr>
-        <tr> 	
+        <tr>
           <td>Coverage Period:</td>
           <td>${invoice.startPeriod?date} - ${invoice.endPeriod?date}</td>
         </tr>
-        <tr> 	 
+        <tr>
           <td>Invoice Date:</td>
           <td>${invoice.startPeriod?date}</td>
         </tr>
-        <tr> 	
+        <tr>
             <td>Invoice Due Date:#</td>
             <td>${invoice.endPeriod?date}</td>
         </tr>
-        <tr> 	
+        <tr>
             <td>Total Amount Due:</td>
             <td><b>${invoice.total}</b></td>
         </tr>
@@ -292,16 +293,16 @@
 	<div id="locationInfoTop">
       <table>
        <tr>
-         <td>${billInfo.address1}</td>
+         <td>MHC</td>
        </tr>
        <tr>
-          <td>Mailbox</td>
+          <td>P.O Box 410035</td>
       </tr>
       <tr>
-          <td>${billInfo.city}</td>
+          <td width="500px">Salt Lake City,UT 84141-0035</td>
       </tr>
-      <tr>	
-          <td>Website</td>
+      <tr>
+          <td>www.mhc.coop</td>
       </tr>
       </table>
   	</div>
@@ -309,16 +310,16 @@
   	<div id="userInfoTop">
     	<table>
     	<tr>
-      		<td>${billInfo.firstName} ${billInfo.lastName}</td>
+      		<td width="500px">${invoice.billTo.companyName}</td>
     	</tr>
    		<tr>
-      		<td>Street ${billInfo.address1}</td>
+      		<td  width="500px">${invoice.billTo.address1}</td>
     	</tr>
     	<tr>
-         	<td>${billInfo.city}, ${billInfo.state}, ${billInfo.zip}</td>
+         	<td  width="500px">${invoice.billTo.city}, ${invoice.billTo.state}, ${invoice.billTo.zip}</td>
     	</tr>
   		</table>
-  	</div>	
+  	</div>
 
   	<div id="benefitsStatement">
   		<h4>BENEFITS ACCOUNT STATEMENT</h4>
@@ -328,7 +329,7 @@
       <table class="funds">
         <tr>
           <td class="fundsCell"><b>Previous Balance</b></td>
-          <td class="funds">${invoice.previousBalance}</td>
+          <td class="funds">${invoice.previousBalance?string.currency}</td>
         </tr>
         <tr>
           <td class="fundsCell"><b>Payments</b></td>
@@ -336,15 +337,15 @@
         </tr>
         <tr>
           <td class="fundsCell"><b>Current Period Charges</b></td>
-          <td class="funds">09/01/2015-09/30/2015</td>
+          <td class="funds">${invoice.startPeriod?date} - ${invoice.endPeriod?date}</td>
         </tr>
         <tr>
           <td class="fundsCell"><b>Adjustments</b></td>
-          <td class="funds">${invoice.adjustment}</td>
+          <td class="funds">${invoice.adjustment?string.currency}</td>
         </tr>
         <tr>
           <td class="fundsCell"><b>Total Amount Due</b></td>
-          <td class="funds">${invoice.total}</td>
+          <td class="funds">${invoice.total?string.currency}</td>
         </tr>
     </table>
   </div>
@@ -393,15 +394,15 @@
 	<table>
 		<tr>
           <td width="120">Account #:</td>
-          <td>${invoice.uniqueId?c}</td>
+          <td width="120">${invoice.uniqueId?string["00000000000000"]}</td>
         </tr>
         <tr>
           <td width="120">Invoice #:</td>
-          <td>${caseInfo.uniqueId?c}</td>
+          <td>${invoice.group.uniqueId?c}</td>
         </tr>
         <tr>
-          <td width="120">Invoice#</td>
-          <td>${invoice.endPeriod?date}</td>
+          <td width="120">Due Date:</td>
+          <td >${invoice.endPeriod?date}</td>
         </tr>
         <tr>
           <td width="120">Total Amount Due:</td>
@@ -439,7 +440,7 @@
 	</table>
 </div>
 
-	
+
 <div id="bottomMailingInfo">
 	<table>
 		<tr>
@@ -454,23 +455,23 @@
 	</table>
 </div>
 
-<p id="bankId">20000000005004 000076945 0008809299 3</p>	
+<p id="bankId">${invoice.uniqueId?string["00000000000000"]}${checkDigit} ${invoice.group.uniqueId?string["0000000000"]} ${invoice.total?string["0000000000"]} 3</p>
 
 <div>
 	<h2 id="invoiceSummaryPosition">Invoice Summary</h2>
 </div>
 
 <div id="invoiceSummaryInfoTableTop">
-		<table>
+	<table>
 		<tr>
-          <td width="120">Account #:</td>
-          <td>${invoice.uniqueId?c}</td>
+          <td width="120px">Account #:</td>
+          <td>${invoice.uniqueId?string["00000000000000"]}</td>
         </tr>
         <tr>
-          <td>Invoice #:</td>
-          <td>${caseInfo.uniqueId?c}</td>
+          <td >Invoice #:</td>
+          <td>${invoice.group.uniqueId?c}</td>
         </tr>
-        <tr>	
+        <tr>
           <td>Coverage Period:</td>
           <td>${invoice.startPeriod?date} - ${invoice.endPeriod?date}</td>
         </tr>
@@ -490,37 +491,35 @@
 </div>
 
 <div id="invoiceSummaryLocationInfoTop">
-	  <table>
+	   <table>
        <tr>
-         <td>${billInfo.address1}</td>
+         <td>MHC</td>
        </tr>
        <tr>
-          <td>Mailbox</td>
+          <td>P.O Box 410035</td>
       </tr>
       <tr>
-          <td>${billInfo.city}</td>
+          <td width="500px">Salt Lake City,UT 84141-0035</td>
       </tr>
       <tr>
-          <td>Website</td>
+          <td>www.mhc.coop</td>
       </tr>
       </table>
 </div>
 
 <div id="invoiceSummaryLocationTable">
 	<table>
-		<tr>
-			<td>Opportunities INC</td>
-		</tr>
-		<tr>
-			<td>PO BOX 2289</td>
-		</tr>
-		<tr>
-			<td>NULL</td>
-		</tr>
-		<tr>
-			<td>GREAT FALLS, MT 59403</td>
-		</tr>
-	</table>
+	<table>
+    	<tr>
+      		<td width="500px">${invoice.billTo.companyName}</td>
+    	</tr>
+   		<tr>
+      		<td  width="500px">${invoice.billTo.address1}</td>
+    	</tr>
+    	<tr>
+         	<td  width="500px">${invoice.billTo.city}, ${invoice.billTo.state}, ${invoice.billTo.zip}</td>
+    	</tr>
+  		</table>
 </div>
 
 <div id="invoiceSummaryTable">
@@ -538,7 +537,7 @@
 			<td class="invoiceSummaryTableCell">4570.44</td>
 			<td class="invoiceSummaryTableCell">0.00</td>
 			<td class="invoiceSummaryTableCell">4570.44</td>
-		</tr>	
+		</tr>
 	</table>
 </div>
 <div id="invoiceSummaryTotalAmountDueTable">
@@ -570,13 +569,13 @@
 		<tr>
 		<td>Enter required card information</td>
 		</tr>
-	</table>	
+	</table>
 </div>
 
 <div id="invoiceSummaryMailCheckToTable">
 	<table>
 		<tr>
-			<td>Check Payment mail check to </td>		
+			<td>Check Payment mail check to </td>
 		</tr>
 		<tr>
 			<td>MHC, PO Box 410035</td>
@@ -595,7 +594,7 @@
 	<table>
 	<tr>
 		<td>Invoice Number:</td>
-		<td>${caseInfo.uniqueId?c}</td>
+		<td>${invoice.group.uniqueId?c}</td>
 	</tr>
 	<tr>
 		<td>Account Number:</td>
@@ -603,8 +602,8 @@
 	</tr>
 	<tr>
 		<td>Coverage Period:</td>
-		<td>07/07/7777-07/07/7777</td>
-	</tr>	
+		<td>${invoice.startPeriod?date} - ${invoice.endPeriod?date}</td>
+	</tr>
 	</table>
 </div>
 
@@ -618,7 +617,7 @@
             <td class="specialEmployeeHeaderCells">Last Name</td>
 			<td class="specialEmployeeHeaderCells">First Name</td>
 			<td class="specialEmployeeHeaderCells">Employee ID Dept.</td>
-			<td class="specialEmployeeHeaderCells">Site</td>		
+			<td class="specialEmployeeHeaderCells">Site</td>
 			<td class="specialEmployeeHeaderCells">Plan</td>
 			<td class="specialEmployeeHeaderCells">Coverage Level</td>
 			<td class="specialEmployeeHeaderCells">Month</td>
@@ -626,7 +625,13 @@
         </tr>
     </#if>
     <tr>
-        <td>${transaction.amount}</td>
+        <td>${transaction.lastName}</td>
+        <td>${transaction.firstName}</td>
+        <td></td>
+        <td></td>
+        <td>${transaction.productName}</td>
+        <td>1</td>
+        <td>${transaction.coverageStart?string["MMM yyyy"]}</td>
     </tr>
     <#if counter == maxItems>
         <#assign counter = 0>
@@ -635,22 +640,22 @@
     </#if>
 	</#list>
 	</table>
-</div>	
+</div>
 
 <div id="adjustmentDetailTable">
 	<table>
 	<tr>
 		<td>Invoice Number:</td>
-		<td>${caseInfo.uniqueId?c}</td>
+		<td>${invoice.group.uniqueId?c}</td>
 	</tr>
 	<tr>
 		<td>Account Number:</td>
 		<td>${invoice.uniqueId?c}}</td>
-	</tr>	
+	</tr>
 	<tr>
 		<td>Coverage Period:</td>
-		<td>07/07/7777-07/07/7777</td>
-	</tr>	
+		<td>${invoice.startPeriod?date} - ${invoice.endPeriod?date}</td>
+	</tr>
 	</table>
 </div>
 
@@ -675,9 +680,7 @@
 			<td></td>
 			<td></td>
 			<td></td>
-		</tr>	
-	</table>		
+	</table>
 </div>
-
-</body>	
-</html>
+</body>
+</html>	
